@@ -13,7 +13,7 @@
    overflow:auto;
 }
 /*Style de notebox quand on le fait apparaître*/
-.notebox.plein{
+.plein {
   padding:14px 20px;
   border:2px solid black;  
 }
@@ -24,4 +24,7 @@
 /*Par défaut on ne fait apparaître aucune note de bas de page*/
 div.notebox div {
    display:none;
+}
+div.notebox div.visible {
+   display:block;
 }
