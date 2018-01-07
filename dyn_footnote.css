@@ -1,0 +1,32 @@
+ a.spip_note {
+   text-decoration:none;
+   background-color: #FEF6BB;
+   padding-left: 2px;
+   padding-right: 2px;
+   margin-right: 2px;
+}
+
+.notebox{
+   z-index: 9;
+   opacity:1;
+   position: fixed;
+   left: 0px;
+   bottom: 0px;
+   margin-left: 0px;
+   margin-right: 0px;
+   padding:0;
+   background-color: #fff;
+   max-height:30%;
+   overflow:auto;
+}
+.notebox.plein{
+  padding:14px 20px;
+  border:2px solid black;  
+}
+.notebox h2 {
+  display:none;
+}
+
+div.notebox div {
+   display:none;
+}
