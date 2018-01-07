@@ -1,11 +1,4 @@
- a.spip_note {
-   text-decoration:none;
-   background-color: #FEF6BB;
-   padding-left: 2px;
-   padding-right: 2px;
-   margin-right: 2px;
-}
-
+/*hauteur max de la boîte de notes : 30%*/
 .notebox{
    z-index: 9;
    opacity:1;
@@ -19,14 +12,16 @@
    max-height:30%;
    overflow:auto;
 }
+/*Style de notebox quand on le fait apparaître*/
 .notebox.plein{
   padding:14px 20px;
   border:2px solid black;  
 }
+/*pour ne pas montrer le "NOTES" en gras, on ajoute cette exception à la section h2*/
 .notebox h2 {
   display:none;
 }
-
+/*Par défaut on ne fait apparaître aucune note de bas de page*/
 div.notebox div {
    display:none;
 }
