@@ -23,23 +23,23 @@ function apparait() {
 		var positionnote=notetexte[i].getBoundingClientRect().top;
 		if (positionnote>=0 && positionnote<=hauteurfenetre) {
 			/*Si la note i apparaît et est à moins de 60% du haut, alors on la compte dans les notes à afficher */
-			notebas[i].style.display="inline";
+			notebas[i].classList.add='visible';
 			/*auquel cas on incrémente le compteur*/
     		compteur++;
 		}
 		else {
 			/*Sinon, la  note ne sera pas affichée*/
-			notebas[i].style.display="none";
+			notebas[i].classList.remove='visible';
 		}
+		if (compteur>0) {
+  			/*Si au moins une note apparaît, on fait apparaître leur contenu en bas de l'écran en créant une boîte*/
+			document.querySelectorAll('.notebox')[0].classList.add('plein');
+  		}
+  		else {
+  			/*Sinon on la fait disparaître, acabradrabra*/
+  			document.querySelectorAll('.notebox')[0].classList.remove('plein');
+  		}
 	}
-  if (compteur>0) {
-  	/*Si au moins une note apparaît, on fait apparaître leur contenu en bas de l'écran en créant une boîte*/
-	document.querySelectorAll('.notebox')[0].classList.add('plein');
-  }
-  else {
-  	/*Sinon on la fait disparaître, acabradrabra*/
-  	document.querySelectorAll('.notebox')[0].classList.remove('plein');
-  }
 }
 (function load() {
 	document.addEventListener("scroll",apparait,false);
